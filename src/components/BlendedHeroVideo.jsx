@@ -7,7 +7,6 @@ export default function BlendedHeroVideo() {
   useEffect(() => {
     const video = videoEl.current;
 
-    // Guarantee autoplay on all browsers + iOS
     const ensureAutoplay = () => {
       video.play().catch(() => {
         setTimeout(ensureAutoplay, 200);
@@ -15,7 +14,6 @@ export default function BlendedHeroVideo() {
     };
     ensureAutoplay();
 
-    // Subtle Awwwards-style zoom animation
     gsap.to(video, {
       scale: 1.06,
       duration: 14,
@@ -27,8 +25,7 @@ export default function BlendedHeroVideo() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-white">
-
-      {/* FULLSCREEN VIDEO (kept exactly as previous styles) */}
+      {/* FULLSCREEN VIDEO */}
       <video
         ref={videoEl}
         src="/videos/hero.mp4"
@@ -40,7 +37,17 @@ export default function BlendedHeroVideo() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* BOTTOM WHITE BLEND (same gradient we used earlier) */}
+      {/* FULL VIDEO GREEN COLOR WASH */}
+      <div
+        className="absolute inset-0 pointer-events-none bg-[#1d5a27]/70 mix-blend-hue"
+      />
+
+      {/* GREEN DEPTH / TONE BALANCE */}
+      <div
+        className="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(29,90,39,0.24)_0%,rgba(29,90,39,0.18)_48%,rgba(0,0,0,0.12)_100%)] mix-blend-multiply"
+      />
+
+      {/* BOTTOM WHITE BLEND */}
       <div
         className="absolute bottom-0 left-0 w-full h-[40vh]
                    pointer-events-none bg-gradient-to-b

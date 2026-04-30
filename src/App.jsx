@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import BlendedHeroVideo from './components/BlendedHeroVideo';
 import ServicesShowcase from './components/ServicesShowcase';
 import GalleryCard from "./components/MasonaryDriftGallery";
+import CoverageMapSection from './components/CoverageMap';
 
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
       <HeroIntro/>
       <ServicesShowcase/>
       <MetricsSection/>
+      <CoverageMapSection/>
       <GalleryCard />
-    
       <TestimonialCarousel/>
     <Footer/>
       </div>

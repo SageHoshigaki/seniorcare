@@ -76,46 +76,48 @@ function AnimatedNumber({ value, suffix = "", duration = 3200 }) {
 
 export default function MetricsSection() {
   return (
-    <section className="w-full bg-white">
+    <section className="flex min-h-screen w-full flex-col bg-white">
       {/* TOP SECTION */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-12 px-6 pt-24 pb-14 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
         {/* LEFT COLUMN — TEXT */}
-        <div className="space-y-6">
-          <h1 className="text-[40px] md:text-[52px] lg:text-[60px] font-bold leading-[1.05] tracking-tight text-neutral-900">
-            <span className="underline underline-offset-4 decoration-[3px]">
+        <div className="space-y-7">
+          <h1 className="text-[54px] font-bold leading-[0.98] tracking-tight text-neutral-900 md:text-[72px] lg:text-[84px]">
+            <span className="underline decoration-[3px] underline-offset-4">
               SeniorCare
             </span>{" "}
             An EMS Agency That Cares.
-            <span className="inline-block ml-2 text-white bg-red-500 rounded-sm text-[14px] px-1 py-[1px] leading-none">
+            <span className="ml-2 inline-block align-middle rounded-sm bg-red-500 px-1 py-[1px] text-[14px] leading-none text-white">
               2
             </span>
           </h1>
 
-          <p className="text-neutral-500 uppercase tracking-wide text-sm">
+          <p className="text-sm uppercase tracking-wide text-neutral-500">
             Website coming soon
           </p>
         </div>
 
         {/* RIGHT COLUMN — IMAGE */}
-        <div className="w-full flex items-center justify-center">
-          <img
-            src="./gallery/CAAS.png"
-            alt="CAAS Accredited Badge"
-            className="w-full h-[360px] object-contain rounded-md"
-          />
+        <div className="flex w-full items-center justify-center lg:justify-end">
+          <div className="flex w-full max-w-[430px] items-center justify-center">
+            <img
+              src="/gallery/CAAS.png"
+              alt="CAAS Accredited Badge"
+              className="h-[390px] w-full rounded-md object-contain"
+            />
+          </div>
         </div>
       </div>
 
       {/* STATS SECTION */}
       <div className="border-t border-neutral-200 py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-12">
           {metrics.map((metric) => (
             <div key={metric.label}>
               <h2 className="text-[64px] font-bold leading-none text-neutral-900">
                 <AnimatedNumber value={metric.value} suffix={metric.suffix} />
               </h2>
 
-              <p className="mt-4 text-[#174f25] text-sm font-black uppercase tracking-wide max-w-xs">
+              <p className="mt-4 max-w-xs text-sm font-black uppercase tracking-wide text-[#174f25]">
                 {metric.label}
               </p>
             </div>
