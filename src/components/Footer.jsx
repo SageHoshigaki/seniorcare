@@ -131,7 +131,7 @@ export default function Footer() {
       {/* Bottom right area */}
       <div className="max-w-7xl mx-auto px-6 relative z-10 mt-12 flex flex-col md:flex-row justify-between items-center">
         <p className="text-gray-400 text-[13px]">
-          © ALL RIGHTS RESERVED 2024
+          © ALL RIGHTS RESERVED 2026
         </p>
 
         <div className="flex space-x-6 text-[13px]">
