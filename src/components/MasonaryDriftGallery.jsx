@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const topImages = [
   {
     title: "Critical Response",
-    src: "./gallery/helipad.png",
+    src: "/gallery/helipad.png",
     wide: false,
   },
   {
@@ -13,7 +13,7 @@ const topImages = [
   },
   {
     title: "Transport Ready",
-    src: "./gallery/img3.png",
+    src: "/gallery/img3.png",
     wide: false,
   },
   {
