@@ -1,0 +1,10 @@
+/* Circular spotlight around ambulance */
+.clip-ambulance {
+  clip-path: circle(28% at 50% 60%);
+  transition: clip-path 0.8s ease;
+}
+
+/* OPTIONAL: animate spotlight on hover or scroll */
+.clip-ambulance:hover {
+  clip-path: circle(35% at 50% 60%);
+}

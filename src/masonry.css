@@ -1,0 +1,66 @@
+/* src/masonry.css */
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* columns – give each a slightly different tilt like the reference */
+.masonry-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.masonry-column-1 .masonry-card {
+  transform: rotate(-3deg);
+}
+
+.masonry-column-2 .masonry-card {
+  transform: rotate(1.5deg);
+}
+
+.masonry-column-3 .masonry-card {
+  transform: rotate(-2deg);
+}
+
+/* card frame */
+.masonry-card {
+  background: #ffffff;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+/* tall images like the reference, with subtle zoom */
+.masonry-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 630px;
+  object-fit: cover;
+  transition: transform 0.7s ease-out;
+}
+
+.masonry-card:hover .masonry-image {
+  transform: scale(1.03);
+}
+
+/* responsive – stack columns on small screens */
+@media (max-width: 1024px) {
+  .masonry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .masonry-card {
+    transform: rotate(0deg);
+  }
+}
