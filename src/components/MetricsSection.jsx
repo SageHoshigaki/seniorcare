@@ -92,7 +92,7 @@ export default function MetricsSection() {
           </h1>
 
           <p className="text-sm uppercase tracking-wide text-neutral-500">
-            Website coming soon
+            
           </p>
         </div>
 
